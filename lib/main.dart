@@ -45,7 +45,6 @@ class _MyHomePageState extends State<MyHomePage> {
             RaisedButton(
               child: Text('Test me & crash :-('),
               onPressed: () async {
-                print('Tr ${_deviceCalendarPlugin.runtimeType}');
                 var permissionsGranted =
                     await _deviceCalendarPlugin.hasPermissions();
                 if (permissionsGranted.isSuccess && !permissionsGranted.data) {
@@ -68,6 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   start: DateTime.now(),
                   end: DateTime.now().add(Duration(minutes: 30)),
                 );
+                // Crash intended
                 _deviceCalendarPlugin.createOrUpdateEvent(event);
               },
             ),
