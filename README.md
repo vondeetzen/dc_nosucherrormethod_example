@@ -29,7 +29,7 @@ Currently only tested on iOS 13 simulator.
 
 Looked at `/[...shortened].../.pub-cache/hosted/pub.dartlang.org/device_calendar-3.0.0/lib/src/device_calendar.dart:202` and found the line:
 
-```
+```dart
 _parsePlatformExceptionAndUpdateResult<String>(e, res);
 ```
 
