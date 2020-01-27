@@ -59,11 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 final calendarsResult =
                     await _deviceCalendarPlugin.retrieveCalendars();
                 final calendars = calendarsResult?.data;
-                final writeableCalendar = calendars.firstWhere((cal) {
+                final writableCalendar = calendars.firstWhere((cal) {
                   return cal.isReadOnly == false;
                 });
                 final event = Event(
-                  writeableCalendar.id,
+                  writableCalendar.id,
                   title: 'My small event',
                   start: DateTime.now(),
                   end: DateTime.now().add(Duration(minutes: 30)),
