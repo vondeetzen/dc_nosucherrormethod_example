@@ -33,7 +33,12 @@ Looked at `/[...shortened].../.pub-cache/hosted/pub.dartlang.org/device_calendar
 _parsePlatformExceptionAndUpdateResult<String>(e, res);
 ```
 
-For debugging purposes I've added a statement `print('e = >$e< and res.success = >${res.isSuccess}< and res.data=>${res.data}<');` before and got:
+For debugging purposes I've added a statement
+```dart
+print('e = >$e< and res.success = >${res.isSuccess}< and res.data=>${res.data}<');
+_parsePlatformExceptionAndUpdateResult<String>(e, res);
+```
+before and got:
 
 ```
 e = >NoSuchMethodError: The getter 'data' was called on null.
